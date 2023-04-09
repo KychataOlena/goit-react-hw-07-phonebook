@@ -2,15 +2,15 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { NameLabel, FormInput, FormButton } from './ContactForm.styled';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from 'redux/contactsSlice';
-import { getContact } from 'redux/selectors';
+
+import { addContact } from 'redux/operations';
 
 export function ContactForm() {
   const [name, setName] = useState();
   const [number, setNumber] = useState('');
 
   const dispatch = useDispatch();
-  const contacts = useSelector(getContact);
+  const contacts = useSelector(addContact);
 
   const handleChange = event => {
     const { name, value } = event.target;
