@@ -2,7 +2,6 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { setFilter } from 'redux/filtersSlice';
 
-import PropTypes from 'prop-types';
 import { FilterInput } from './Filter.styled';
 
 export const Filter = () => {
@@ -19,8 +18,4 @@ export const Filter = () => {
       </label>
     </form>
   );
-};
-
-Filter.propTypes = {
-  filter: PropTypes.string.isRequired,
 };
